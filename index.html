@@ -115,7 +115,7 @@
             height: 600px;
             width: auto;
             opacity: 0;
-            transition: opacity 1s ease-in-out, transform 2s cubic-bezier(0.4, 0, 0.2, 1), height 2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 1s ease-in-out, transform 1s cubic-bezier(0.4, 0, 0.2, 1), height 1s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 30;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
@@ -169,7 +169,7 @@
             transform: translate(-50%, -50%);
             height: 350px;
             display: block;
-            transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 30;
         }
 
@@ -1970,7 +1970,7 @@
                 top: 35%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+                transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .social-links-container {
@@ -2843,7 +2843,7 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
                 } else {
                     clearInterval(cellInterval);
                 }
-            }, 150); // Show each cell every 150ms
+            }, 120); // Show each cell every 120ms (1.25x faster)
             
             // Step 3: Fade in logo after grid is complete
             setTimeout(() => {
@@ -2895,11 +2895,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
                               if (socialLinksContainer) {
                                   socialLinksContainer.classList.add('visible');
                               }
-                         }, 250); // 0.25 seconds after animation is done
-                     }, 2000); // Wait for 2s transition to complete
+                         }, 100); // 0.1 seconds after animation is done (faster)
+                     }, 500); // Wait for 0.5s transition to complete (much faster)
             }, 1000);
-                }, 2000); // Wait 2 seconds after logo appears
-            }, 2000); // Start logo fade-in after grid animation completes
+                }, 900); // Wait 0.9 seconds after logo appears (start shrinking after images fade)
+            }, 1600); // Start logo fade-in after grid animation completes (20% faster)
             
             // Initialize calendar and other components
             calendar = new Calendar();
