@@ -3,7 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAU American Marketing Association</title>
+    <title>FAU American Marketing Association - Student Marketing Organization</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/logos/fauama.png">
+    <link rel="apple-touch-icon" href="media/logos/fauama.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join the FAU American Marketing Association - Florida Atlantic University's premier student marketing organization. Connect with peers, develop skills, and advance your marketing career.">
+    <meta name="keywords" content="FAU, American Marketing Association, AMA, marketing, student organization, Florida Atlantic University, business, networking, professional development">
+    <meta name="author" content="FAU American Marketing Association">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FAU American Marketing Association">
+    <meta property="og:description" content="Join Florida Atlantic University's premier student marketing organization. Connect with peers, develop skills, and advance your marketing career.">
+    <meta property="og:image" content="media/logos/fauama.png">
+    <meta property="og:url" content="https://fauama.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FAU AMA">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAU American Marketing Association">
+    <meta name="twitter:description" content="Join Florida Atlantic University's premier student marketing organization.">
+    <meta name="twitter:image" content="media/logos/fauama.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FAU American Marketing Association",
+        "alternateName": "FAU AMA",
+        "url": "https://fauama.com",
+        "logo": "media/logos/fauama.png",
+        "description": "Florida Atlantic University's premier student marketing organization",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Boca Raton",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "amaoffau@gmail.com",
+            "telephone": "954-997-1121",
+            "contactType": "General Inquiry"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/fauama",
+            "https://www.instagram.com/fau_ama/"
+        ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -534,6 +587,135 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #CC0000;
+        }
+
+        .dot:hover {
+            background-color: #a00000;
+        }
+
+        /* Social Impact Section */
+        .social-impact {
+            background: linear-gradient(135deg, #003366, #1a4d80);
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-impact.fade-in {
+            opacity: 1;
+        }
+
+        .social-impact h2 {
+            color: white;
+        }
+
+
+        .social-impact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .social-impact-item {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social-impact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .social-impact-image {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .impact-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .social-impact-item:hover .impact-image {
+            transform: scale(1.05);
+        }
+
+        .social-impact-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .social-impact-content h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #CC0000;
+            padding-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .social-impact-text {
+            color: #4D4C55;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-impact-text p {
+            margin: 0;
+        }
+
+        .read-more-btn {
+            background: linear-gradient(135deg, #CC0000, #a00000);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .read-more-btn:hover {
+            background: linear-gradient(135deg, #a00000, #800000);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
+        }
 
         /* Leadership Section */
         .leadership-section {
@@ -1840,6 +2022,42 @@
             margin: 0 auto;
         }
 
+        .legal-content {
+            text-align: left;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .legal-content h4 {
+            color: #003366;
+            margin: 1.5rem 0 0.8rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .legal-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .legal-content ul {
+            margin: 0.8rem 0 1rem 1.5rem;
+            color: #555;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-content a {
+            color: #CC0000;
+            text-decoration: none;
+        }
+
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
         /* Contact form styles */
         .contact-form {
             background: white;
@@ -2057,20 +2275,65 @@
         }
 
         .footer-content {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
             align-items: flex-start;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            padding: 2rem 0;
         }
 
         .footer-left {
             text-align: left;
-            flex: 1;
+        }
+
+        .footer-left p {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .footer-center {
+            text-align: left;
+        }
+
+        .footer-center h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-bottom: 2px solid #CC0000;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-legal {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .footer-legal a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-legal a:hover {
+            color: #CC0000;
         }
 
         .footer-right {
             text-align: right;
-            flex: 1;
+        }
+
+        .footer-right h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-bottom: 2px solid #CC0000;
+            padding-bottom: 0.5rem;
         }
 
         .footer p {
@@ -2138,7 +2401,7 @@
             }
 
             .ama-logo {
-                height: 35px;
+                height: 90px;
             }
 
             /* Hide navigation links on mobile */
@@ -2171,6 +2434,12 @@
 
             .dues-option {
                 padding: 1.5rem;
+                height: 350px;
+            }
+
+            .dues-option h3 {
+                margin: 0 0 1rem 0;
+                font-size: 1.3rem;
             }
 
             .dues-logo {
@@ -2404,7 +2673,7 @@
 
             /* Mobile Footer */
             .footer-content {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
 
@@ -2414,6 +2683,16 @@
 
             .footer-left p {
                 font-size: 0.8rem;
+            }
+
+            .footer-center {
+                text-align: center;
+            }
+
+            .footer-legal {
+                flex-direction: row;
+                justify-content: center;
+                gap: 1rem;
             }
 
             .footer-right {
@@ -2426,6 +2705,43 @@
 
             .footer p[style*="font-size: 0.9rem"] {
                 font-size: 0.72rem !important;
+            }
+
+            /* Social Impact Mobile Styles */
+
+            .social-impact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .social-impact-item {
+                text-align: center;
+            }
+
+            .social-impact-image {
+                height: 280px;
+            }
+
+            .social-impact-content {
+                padding: 1.2rem;
+            }
+
+            .social-impact-content h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .social-impact-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+            }
+
+            .read-more-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
+                align-self: center;
             }
 
         }
@@ -2549,12 +2865,67 @@
                             <img src="media/people2.jpeg" alt="FAU AMA Members" class="about-image">
                             <img src="media/people3.jpeg" alt="FAU AMA Members" class="about-image">
                         </div>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
                         <a href="https://groupme.com/join_group/95811169/UVO3tjwP" target="_blank" class="join-now-btn">JOIN NOW</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Social Impact Section -->
+        <section id="social-impact" class="section social-impact">
+            <div class="container">
+                <h2>Social Impact</h2>
+                
+                <div class="social-impact-grid">
+                    <div class="social-impact-item">
+                        <div class="social-impact-image">
+                            <img src="media/impact/foodbank.jpeg" alt="Palm Beach Food Bank" class="impact-image">
+                        </div>
+                        <div class="social-impact-content">
+                            <h3>Palm Beach Food Bank</h3>
+                            <div class="social-impact-text">
+                                <p class="text-preview">AMA, in collaboration with Florida Atlantic University's College of Business has established a tight-knit connection with the Palm Beach County Food Bank. Food insecurity is a prevalent issue in our county...</p>
+                                <p class="text-full" style="display: none;">AMA, in collaboration with Florida Atlantic University's College of Business has established a tight-knit connection with the Palm Beach County Food Bank. Food insecurity is a prevalent issue in our county, and we are determined to help fight food insecurity in our community. In the spring semester, AMA will participate in the annual 'Pack to Give Back' day, where students donate their time to pack bulk foods for food insecure families throughout our county.</p>
+                            </div>
+                            <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
+                        </div>
+                    </div>
+
+                    <div class="social-impact-item">
+                        <div class="social-impact-image">
+                            <img src="media/impact/breastcancer.jpeg" alt="Florida Breast Cancer Foundation" class="impact-image">
+                        </div>
+                        <div class="social-impact-content">
+                            <h3>Florida Breast Cancer Foundation</h3>
+                            <div class="social-impact-text">
+                                <p class="text-preview">For the month of October, we will be partnering with the Florida Breast Cancer Foundation to not only reduce our carbon footprint amongst each other on campus...</p>
+                                <p class="text-full" style="display: none;">For the month of October, we will be partnering with the Florida Breast Cancer Foundation to not only reduce our carbon footprint amongst each other on campus, but within the community. Students will be swapping clothes amongst each other to stop unnecessary shopping but their parents and families are able to donate clothing and house items to the foundation that will be picked up to support the unable families so they can focus on caring for their loved one through the cancer battle.</p>
+                            </div>
+                            <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
+                        </div>
+                    </div>
+
+                    <div class="social-impact-item">
+                        <div class="social-impact-image">
+                            <img src="media/impact/4ocean.png" alt="4Ocean Beach Cleanup" class="impact-image">
+                        </div>
+                        <div class="social-impact-content">
+                            <h3>4Ocean Beach Cleanup</h3>
+                            <div class="social-impact-text">
+                                <p class="text-preview">We will be hosting a beach clean-up in collaboration with 4Ocean to not only give back to our community, but to help protect our environment...</p>
+                                <p class="text-full" style="display: none;">We will be hosting a beach clean-up in collaboration with 4Ocean to not only give back to our community, but to help protect our environment. Students will come together to pick up litter along the shoreline, helping reduce pollution and preserve the natural beauty of our beaches. This initiative allows us to make a meaningful impact on the place we call home while encouraging sustainable habits that benefit both our campus and the greater Boca Raton community.</p>
+                            </div>
+                            <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Leadership Section -->
         <section id="leadership" class="leadership-section">
@@ -2806,7 +3177,7 @@
                 <h3 class="points-modal-title">Join Our Mailing List</h3>
                 
                 <div class="points-modal-message">
-                    We are working on making our email list this is currently under construction
+                    We are working on making our email list this is currently under construction (If this becomes the official site).  We do not want to impersonate the FAU AMA.
                 </div>
                 
                 <img src="media/meme.jpg" alt="Mailing list in progress" class="points-modal-meme">
@@ -2824,6 +3195,78 @@
                 </div>
                 
                 <img src="media/meme.jpg" alt="Dues payment in progress" class="points-modal-meme">
+            </div>
+        </div>
+
+        <!-- Privacy Policy Modal -->
+        <div class="points-modal" id="privacyModal">
+            <div class="points-modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
+                <button class="points-modal-close" id="privacyModalClose">&times;</button>
+                <h3 class="points-modal-title">Privacy Policy</h3>
+                
+                <div class="legal-content">
+                    <p><strong>Last Updated:</strong> January 2025</p>
+                    
+                    <h4>1. Information We Collect</h4>
+                    <p>We collect information you provide directly to us, such as when you join our mailing list, register for events, or contact us. This may include your name, email address, phone number, and academic information.</p>
+                    
+                    <h4>2. How We Use Your Information</h4>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Send you updates about FAU AMA events and activities</li>
+                        <li>Communicate with you about membership and dues</li>
+                        <li>Organize and manage events</li>
+                        <li>Improve our services and website</li>
+                    </ul>
+                    
+                    <h4>3. Information Sharing</h4>
+                    <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
+                    
+                    <h4>4. Data Security</h4>
+                    <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                    
+                    <h4>5. Contact Us</h4>
+                    <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:amaoffau@gmail.com">amaoffau@gmail.com</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terms of Service Modal -->
+        <div class="points-modal" id="termsModal">
+            <div class="points-modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
+                <button class="points-modal-close" id="termsModalClose">&times;</button>
+                <h3 class="points-modal-title">Terms of Service</h3>
+                
+                <div class="legal-content">
+                    <p><strong>Last Updated:</strong> January 2025</p>
+                    
+                    <h4>1. Acceptance of Terms</h4>
+                    <p>By accessing and using the FAU American Marketing Association website, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                    
+                    <h4>2. Use License</h4>
+                    <p>Permission is granted to temporarily download one copy of the materials on FAU AMA's website for personal, non-commercial transitory viewing only.</p>
+                    
+                    <h4>3. Membership</h4>
+                    <p>Membership in FAU AMA is open to all Florida Atlantic University students. Members must pay both national and local dues as required.</p>
+                    
+                    <h4>4. Code of Conduct</h4>
+                    <p>All members are expected to:</p>
+                    <ul>
+                        <li>Conduct themselves professionally at all events</li>
+                        <li>Respect fellow members and guests</li>
+                        <li>Follow FAU's student code of conduct</li>
+                        <li>Participate actively in organization activities</li>
+                    </ul>
+                    
+                    <h4>5. Event Participation</h4>
+                    <p>Participation in FAU AMA events is voluntary. Members are responsible for their own safety and behavior at all events.</p>
+                    
+                    <h4>6. Limitation of Liability</h4>
+                    <p>FAU AMA shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.</p>
+                    
+                    <h4>7. Contact Information</h4>
+                    <p>For questions about these Terms of Service, contact us at <a href="mailto:amaoffau@gmail.com">amaoffau@gmail.com</a>.</p>
+                </div>
             </div>
         </div>
 
@@ -2936,7 +3379,15 @@
                             To learn more about the national AMA chapter, <a href="https://www.ama.org/" target="_blank" style="color: #CC0000; text-decoration: underline; transition: all 0.3s ease;" onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline';" onmouseout="this.style.color='#CC0000'; this.style.textDecoration='underline';">click here</a>
                         </p>
                     </div>
+                    <div class="footer-center">
+                        <h4>Legal</h4>
+                        <div class="footer-legal">
+                            <a href="#" id="privacyPolicyBtn">Privacy Policy</a>
+                            <a href="#" id="termsOfServiceBtn">Terms of Use</a>
+                        </div>
+                    </div>
                     <div class="footer-right">
+                        <h4>Connect With Us</h4>
                         <div class="footer-social-buttons">
                             <a href="https://www.linkedin.com/company/fauama" target="_blank" title="LinkedIn" class="footer-social-btn">
                                 <img src="media/logos/linkedin.png" alt="LinkedIn">
@@ -2960,6 +3411,52 @@
             </div>
         </footer>
     </div>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68e6cf5f4a9c511950f54332/1j72pk3l6';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    
+    <!-- Hide Tawk.to branding -->
+    <style>
+    #tawk-branding {
+        display: none !important;
+    }
+    .tawk-branding {
+        display: none !important;
+    }
+    [data-tawk-branding] {
+        display: none !important;
+    }
+    /* Additional selectors to hide branding */
+    div[style*="tawk"]:has-text("Powered by") {
+        display: none !important;
+    }
+    </style>
+    
+    <script>
+    // Additional script to hide branding after widget loads
+    Tawk_API.onLoad = function(){
+        // Hide any remaining branding elements
+        setTimeout(function() {
+            var brandingElements = document.querySelectorAll('[id*="branding"], [class*="branding"], [data-tawk-branding]');
+            brandingElements.forEach(function(element) {
+                if (element.textContent && element.textContent.toLowerCase().includes('powered by')) {
+                    element.style.display = 'none';
+                }
+            });
+        }, 2000);
+    };
+    </script>
+    <!--End of Tawk.to Script-->
 
     <script>
         // Embedded calendar config as fallback
@@ -3251,6 +3748,14 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
                                   aboutSection.classList.add('fade-in');
                               }
 
+                              // Fade in Social Impact section after About section
+                              setTimeout(() => {
+                                  const socialImpactSection = document.getElementById('social-impact');
+                                  if (socialImpactSection) {
+                                      socialImpactSection.classList.add('fade-in');
+                                  }
+                              }, 500); // 0.5 seconds after About section fades in
+
                               // Show social links after boot animation completely finishes
                               const socialLinksContainer = document.getElementById('socialLinksContainer');
                               if (socialLinksContainer) {
@@ -3268,6 +3773,8 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
             initPointsModal();
             initMailingModal();
             initDuesModal();
+            initPrivacyModal();
+            initTermsModal();
         });
 
         // Smooth scrolling for navigation links
@@ -4153,6 +4660,82 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
             }
         }
 
+        // Privacy Policy Modal functionality
+        function initPrivacyModal() {
+            const privacyBtn = document.getElementById('privacyPolicyBtn');
+            const privacyModal = document.getElementById('privacyModal');
+            const privacyModalClose = document.getElementById('privacyModalClose');
+
+            if (privacyBtn && privacyModal && privacyModalClose) {
+                // Open modal when privacy policy button is clicked
+                privacyBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    privacyModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                // Close modal when close button is clicked
+                privacyModalClose.addEventListener('click', () => {
+                    privacyModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                });
+
+                // Close modal when clicking outside the modal content
+                privacyModal.addEventListener('click', (e) => {
+                    if (e.target === privacyModal) {
+                        privacyModal.classList.remove('show');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+
+                // Close modal with Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && privacyModal.classList.contains('show')) {
+                        privacyModal.classList.remove('show');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        }
+
+        // Terms of Service Modal functionality
+        function initTermsModal() {
+            const termsBtn = document.getElementById('termsOfServiceBtn');
+            const termsModal = document.getElementById('termsModal');
+            const termsModalClose = document.getElementById('termsModalClose');
+
+            if (termsBtn && termsModal && termsModalClose) {
+                // Open modal when terms of service button is clicked
+                termsBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    termsModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                // Close modal when close button is clicked
+                termsModalClose.addEventListener('click', () => {
+                    termsModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                });
+
+                // Close modal when clicking outside the modal content
+                termsModal.addEventListener('click', (e) => {
+                    if (e.target === termsModal) {
+                        termsModal.classList.remove('show');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+
+                // Close modal with Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && termsModal.classList.contains('show')) {
+                        termsModal.classList.remove('show');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        }
+
         // Instagram like button functionality
         function toggleLike(button) {
             const post = button.closest('.instagram-post');
@@ -4174,20 +4757,75 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
         let calendar;
 
         // Image carousel functionality for About section
+        let carouselInterval;
+        let currentSlideIndex = 0;
+
         function initImageCarousel() {
             const images = document.querySelectorAll('.about-image');
+            const dots = document.querySelectorAll('.dot');
             if (images.length === 0) return;
 
-            let currentIndex = 0;
             const totalImages = images.length;
 
-            function showNextImage() {
-                images[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex + 1) % totalImages;
-                images[currentIndex].classList.add('active');
+            function showSlide(index) {
+                // Remove active class from all images and dots
+                images.forEach(img => img.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Add active class to current image and dot
+                images[index].classList.add('active');
+                dots[index].classList.add('active');
+                
+                currentSlideIndex = index;
             }
 
-            setInterval(showNextImage, 4000);
+            function nextSlide() {
+                const nextIndex = (currentSlideIndex + 1) % totalImages;
+                showSlide(nextIndex);
+            }
+
+            // Auto-advance slides every 4 seconds
+            function startAutoSlide() {
+                carouselInterval = setInterval(nextSlide, 4000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(carouselInterval);
+            }
+
+            // Start auto-slide
+            startAutoSlide();
+
+            // Pause auto-slide on hover
+            const imageContainer = document.querySelector('.about-image-container');
+            if (imageContainer) {
+                imageContainer.addEventListener('mouseenter', stopAutoSlide);
+                imageContainer.addEventListener('mouseleave', startAutoSlide);
+            }
+
+            // Make currentSlide function globally available
+            window.currentSlide = function(n) {
+                showSlide(n - 1); // Convert to 0-based index
+                stopAutoSlide();
+                startAutoSlide(); // Restart auto-slide after manual interaction
+            };
+        }
+
+        // Social Impact Read More functionality
+        function toggleText(button) {
+            const content = button.parentElement;
+            const preview = content.querySelector('.text-preview');
+            const full = content.querySelector('.text-full');
+            
+            if (full.style.display === 'none') {
+                preview.style.display = 'none';
+                full.style.display = 'block';
+                button.textContent = 'Read Less';
+            } else {
+                preview.style.display = 'block';
+                full.style.display = 'none';
+                button.textContent = 'Read More';
+            }
         }
     </script>
 </body>
