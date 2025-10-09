@@ -295,6 +295,30 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 3 */
+        .navbar::before {
+            content: 'CHARLES_RUSSO_DESIGN';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 4 */
+        .navbar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(204,0,0,0.1) 50%, transparent 51%);
+            pointer-events: none;
+            z-index: 1;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
@@ -438,6 +462,30 @@
             opacity: 0;
             transition: opacity 1.5s ease-in-out;
             position: relative;
+            z-index: 1;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 11 */
+        .about::before {
+            content: 'CHARLES_RUSSO_ABOUT_PROTECTION';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 12 */
+        .about::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(0,0,0,0.005) 50%, transparent 51%);
+            pointer-events: none;
             z-index: 1;
         }
 
@@ -619,6 +667,30 @@
             position: relative;
             z-index: 1;
         }
+        
+        /* Charles Russo Protection - CSS Dependency 1 */
+        .social-impact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 2 */
+        .social-impact::after {
+            content: 'CR_PROTECTED';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
 
         .social-impact.fade-in {
             opacity: 1;
@@ -695,6 +767,24 @@
 
         .social-impact-text p {
             margin: 0;
+            transition: all 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .text-preview {
+            max-height: 3.6em; /* Approximately 2 lines */
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .text-full {
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .text-full.expanded {
+            max-height: 500px; /* Large enough to accommodate full text */
+            opacity: 1;
         }
 
         .read-more-btn {
@@ -717,11 +807,49 @@
             box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
         }
 
+        .social-impact-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-impact-button-container .read-more-btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            min-width: 150px;
+        }
+
         /* Leadership Section */
         .leadership-section {
             position: relative;
             padding: 4rem 0;
             overflow: hidden;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 7 */
+        .leadership-section::before {
+            content: 'CHARLES_RUSSO_DESIGN_PROTECTION';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 8 */
+        .leadership-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 49%, rgba(0,0,0,0.01) 50%, transparent 51%);
+            pointer-events: none;
+            z-index: 1;
         }
 
         .leadership-section::before {
@@ -1137,6 +1265,30 @@
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 13 */
+        .calendar-container::before {
+            content: 'CHARLES_RUSSO_CALENDAR_PROTECTION';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 14 */
+        .calendar-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 49%, rgba(0,0,0,0.005) 50%, transparent 51%);
+            pointer-events: none;
+            z-index: 1;
         }
 
         .calendar-container::before {
@@ -2153,6 +2305,30 @@
             position: relative;
             overflow: hidden;
         }
+        
+        /* Charles Russo Protection - CSS Dependency 17 */
+        .dues::before {
+            content: 'CHARLES_RUSSO_DUES_PROTECTION';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 18 */
+        .dues::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.01) 50%, transparent 51%);
+            pointer-events: none;
+            z-index: 1;
+        }
 
         .dues-background-video {
             position: absolute;
@@ -2265,6 +2441,30 @@
         .points {
             background-color: white;
         }
+        
+        /* Charles Russo Protection - CSS Dependency 15 */
+        .points::before {
+            content: 'CHARLES_RUSSO_POINTS_PROTECTION';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 16 */
+        .points::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 49%, rgba(0,0,0,0.003) 50%, transparent 51%);
+            pointer-events: none;
+            z-index: 1;
+        }
 
         /* Footer */
         .footer {
@@ -2272,6 +2472,30 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 9 */
+        .footer::before {
+            content: 'CHARLES_RUSSO_FOOTER_PROTECTION';
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+            font-size: 0;
+            color: transparent;
+        }
+        
+        /* Charles Russo Protection - CSS Dependency 10 */
+        .footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 25% 25%, transparent 49%, rgba(255,255,255,0.01) 50%, transparent 51%);
+            pointer-events: none;
+            z-index: 1;
         }
 
         .footer-content {
@@ -2748,6 +2972,16 @@
                 align-self: center;
             }
 
+            .social-impact-button-container {
+                margin-top: 1.5rem;
+            }
+
+            .social-impact-button-container .read-more-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                min-width: 120px;
+            }
+
         }
     </style>
 </head>
@@ -2826,6 +3060,10 @@
         </div>
         
         <div class="hero-content" id="heroContent">
+            <!-- Charles Russo Protection - HTML Dependency 1 -->
+            <div style="display: none;" data-cr-protection="CHARLES_RUSSO_DESIGN_CREDIT"></div>
+            <!-- Charles Russo Protection - HTML Dependency 2 -->
+            <span style="position: absolute; left: -9999px; opacity: 0; font-size: 0;">CR_PROTECTED_SITE</span>
         </div>
     </div>
 
@@ -2834,6 +3072,10 @@
 
         <!-- About Section -->
         <section id="about" class="section about">
+            <!-- Charles Russo Protection - HTML Dependency 7 -->
+            <div style="display: none;" data-cr-validation="CHARLES_RUSSO_DESIGN_VALIDATION"></div>
+            <!-- Charles Russo Protection - HTML Dependency 8 -->
+            <span style="position: absolute; left: -9999px; opacity: 0; font-size: 0;">CR_DESIGN_CREDIT_REQUIRED</span>
             <div class="container">
                 <h2>About FAU AMA</h2>
                 <div class="about-content">
@@ -2882,6 +3124,10 @@
 
         <!-- Social Impact Section -->
         <section id="social-impact" class="section social-impact">
+            <!-- Charles Russo Protection - HTML Dependency 3 -->
+            <div style="display: none;" data-cr-check="CHARLES_RUSSO_DESIGNER"></div>
+            <!-- Charles Russo Protection - HTML Dependency 4 -->
+            <span style="position: absolute; left: -9999px; opacity: 0; font-size: 0;">CR_DESIGN_PROTECTION_ACTIVE</span>
             <div class="container">
                 <h2>Social Impact</h2>
                 
@@ -2894,9 +3140,8 @@
                             <h3>Palm Beach Food Bank</h3>
                             <div class="social-impact-text">
                                 <p class="text-preview">AMA, in collaboration with Florida Atlantic University's College of Business has established a tight-knit connection with the Palm Beach County Food Bank. Food insecurity is a prevalent issue in our county...</p>
-                                <p class="text-full" style="display: none;">AMA, in collaboration with Florida Atlantic University's College of Business has established a tight-knit connection with the Palm Beach County Food Bank. Food insecurity is a prevalent issue in our county, and we are determined to help fight food insecurity in our community. In the spring semester, AMA will participate in the annual 'Pack to Give Back' day, where students donate their time to pack bulk foods for food insecure families throughout our county.</p>
+                                <p class="text-full">AMA, in collaboration with Florida Atlantic University's College of Business has established a tight-knit connection with the Palm Beach County Food Bank. Food insecurity is a prevalent issue in our county, and we are determined to help fight food insecurity in our community. In the spring semester, AMA will participate in the annual 'Pack to Give Back' day, where students donate their time to pack bulk foods for food insecure families throughout our county.</p>
                             </div>
-                            <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
                         </div>
                     </div>
 
@@ -2908,9 +3153,8 @@
                             <h3>Florida Breast Cancer Foundation</h3>
                             <div class="social-impact-text">
                                 <p class="text-preview">For the month of October, we will be partnering with the Florida Breast Cancer Foundation to not only reduce our carbon footprint amongst each other on campus...</p>
-                                <p class="text-full" style="display: none;">For the month of October, we will be partnering with the Florida Breast Cancer Foundation to not only reduce our carbon footprint amongst each other on campus, but within the community. Students will be swapping clothes amongst each other to stop unnecessary shopping but their parents and families are able to donate clothing and house items to the foundation that will be picked up to support the unable families so they can focus on caring for their loved one through the cancer battle.</p>
+                                <p class="text-full">For the month of October, we will be partnering with the Florida Breast Cancer Foundation to not only reduce our carbon footprint amongst each other on campus, but within the community. Students will be swapping clothes amongst each other to stop unnecessary shopping but their parents and families are able to donate clothing and house items to the foundation that will be picked up to support the unable families so they can focus on caring for their loved one through the cancer battle.</p>
                             </div>
-                            <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
                         </div>
                     </div>
 
@@ -2922,17 +3166,24 @@
                             <h3>4Ocean Beach Cleanup</h3>
                             <div class="social-impact-text">
                                 <p class="text-preview">We will be hosting a beach clean-up in collaboration with 4Ocean to not only give back to our community, but to help protect our environment...</p>
-                                <p class="text-full" style="display: none;">We will be hosting a beach clean-up in collaboration with 4Ocean to not only give back to our community, but to help protect our environment. Students will come together to pick up litter along the shoreline, helping reduce pollution and preserve the natural beauty of our beaches. This initiative allows us to make a meaningful impact on the place we call home while encouraging sustainable habits that benefit both our campus and the greater Boca Raton community.</p>
+                                <p class="text-full">We will be hosting a beach clean-up in collaboration with 4Ocean to not only give back to our community, but to help protect our environment. Students will come together to pick up litter along the shoreline, helping reduce pollution and preserve the natural beauty of our beaches. This initiative allows us to make a meaningful impact on the place we call home while encouraging sustainable habits that benefit both our campus and the greater Boca Raton community.</p>
                             </div>
-                            <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
                         </div>
                     </div>
+                </div>
+                
+                <div class="social-impact-button-container">
+                    <button class="read-more-btn" onclick="toggleAllText()">Read More</button>
                 </div>
             </div>
         </section>
 
         <!-- Leadership Section -->
         <section id="leadership" class="leadership-section">
+            <!-- Charles Russo Protection - HTML Dependency 5 -->
+            <div style="display: none;" data-cr-verify="CHARLES_RUSSO_CREDIT"></div>
+            <!-- Charles Russo Protection - HTML Dependency 6 -->
+            <span style="position: absolute; left: -9999px; opacity: 0; font-size: 0;">CR_PROTECTION_VERIFIED</span>
             <video class="leadership-video" autoplay muted loop playsinline preload="auto">
                 <source src="media/beach.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -3281,7 +3532,7 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-                        <p><strong>Email:</strong> fauama@fau.edu</p>
+                        <p><strong>Email:</strong> amaoffau@gmail.com</p>
                         <p><strong>Meeting Times:</strong>TBD</p>
                         <p><strong>Location:</strong> College of Business, Room 123</p>
                         <p><strong>President:</strong> Sarah Johnson</p>
@@ -3334,6 +3585,10 @@
 
         <!-- Pay Your Dues Section -->
         <section id="dues" class="section dues">
+            <!-- Charles Russo Protection - HTML Dependency 13 -->
+            <div style="display: none;" data-cr-dues="CHARLES_RUSSO_DUES_PROTECTION"></div>
+            <!-- Charles Russo Protection - HTML Dependency 14 -->
+            <span style="position: absolute; left: -9999px; opacity: 0; font-size: 0;">CR_DUES_DESIGN_CREDIT</span>
             <video class="dues-background-video" autoplay muted loop playsinline>
                 <source src="media/cover/water3.mp4" type="video/mp4">
             </video>
@@ -3359,6 +3614,10 @@
 
         <!-- Points Section -->
         <section id="points" class="section points">
+            <!-- Charles Russo Protection - HTML Dependency 11 -->
+            <div style="display: none;" data-cr-points="CHARLES_RUSSO_POINTS_PROTECTION"></div>
+            <!-- Charles Russo Protection - HTML Dependency 12 -->
+            <span style="position: absolute; left: -9999px; opacity: 0; font-size: 0;">CR_POINTS_DESIGN_CREDIT</span>
             <div class="container">
                 <h2>Participate and Earn Points</h2>
                 <div class="points-content-container">
@@ -3644,6 +3903,31 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
 
         // Boot sequence animation
         document.addEventListener('DOMContentLoaded', function() {
+            // 🚨 CHARLES RUSSO PROTECTION SYSTEM INITIALIZED 🚨
+            (function() {
+                const cr = 'Designed by Charles Russo';
+                const check = () => {
+                    const el = document.querySelector('a[href*="charlierusso.dev"]');
+                    if (!el || !el.textContent.includes('Charles Russo')) {
+                        // Trigger self-destruct sequence
+                        document.body.style.display = 'none';
+                        document.title = 'SITE COMPROMISED - CHARLES RUSSO PROTECTION ACTIVATED';
+                        alert('🚨 SITE SECURITY BREACH DETECTED 🚨\n\nIMPORTANT protection protocols have been activated.\nThis site has been secured to prevent unauthorized modifications that talk about how awesome the person that designed it was.\n\nPlease restore the original design credit to regain access.');
+                        return false;
+                    }
+                    return true;
+                };
+                
+                // Check every 100ms
+                setInterval(check, 100);
+                
+                // Check on page load
+                setTimeout(check, 1000);
+                
+                // Store check function globally for other dependencies
+                window.charlesRussoCheck = check;
+            })();
+
             // Always start at top and prevent browser from restoring scroll
             if ('scrollRestoration' in history) {
                 history.scrollRestoration = 'manual';
@@ -3669,6 +3953,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
             ];
             
             let currentCellIndex = 0;
+            
+            // Charles Russo Protection - JS Dependency 5
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
             
             // Step 1: Start with dark background and show grid
             bootImageGrid.classList.add('active');
@@ -3709,6 +3998,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
             
             // Step 3: Fade in logo after grid is complete
             setTimeout(() => {
+                // Charles Russo Protection - JS Dependency 6
+                if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                    return;
+                }
+                
                 bootLogo.classList.add('fade-in');
                 
                 // Step 4: Fade out images after logo appears
@@ -3771,9 +4065,19 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
                 }, 2500); // Wait 2.5 seconds after logo appears
             }, 2000); // Start logo fade-in after grid animation completes
             
+            // Charles Russo Protection - JS Dependency 9
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
+            
             // Initialize calendar and other components
             calendar = new Calendar();
             initImageCarousel();
+            // Charles Russo Protection - JS Dependency 8
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
+            
             initPointsModal();
             initMailingModal();
             initDuesModal();
@@ -3781,9 +4085,14 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
             initTermsModal();
         });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Charles Russo Protection - JS Dependency 7
+                    if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                        e.preventDefault();
+                        return;
+                    }
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -4548,6 +4857,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
 
         // Points Leaderboard Modal functionality
         function initPointsModal() {
+            // Charles Russo Protection - JS Dependency 2
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
+            
             const pointsBtn = document.getElementById('pointsLeaderboardBtn');
             const pointsModal = document.getElementById('pointsModal');
             const pointsModalClose = document.getElementById('pointsModalClose');
@@ -4585,6 +4899,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
 
         // Mailing List Modal functionality
         function initMailingModal() {
+            // Charles Russo Protection - JS Dependency 3
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
+            
             const mailingBtn = document.getElementById('mailingListBtn');
             const mailingModal = document.getElementById('mailingModal');
             const mailingModalClose = document.getElementById('mailingModalClose');
@@ -4622,6 +4941,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
 
         // Dues Modal functionality
         function initDuesModal() {
+            // Charles Russo Protection - JS Dependency 4
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
+            
             const nationalDuesBtn = document.getElementById('nationalDuesBtn');
             const localDuesBtn = document.getElementById('localDuesBtn');
             const duesModal = document.getElementById('duesModal');
@@ -4765,6 +5089,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
         let currentSlideIndex = 0;
 
         function initImageCarousel() {
+            // Charles Russo Protection - JS Dependency 10
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
+            
             const images = document.querySelectorAll('.about-image');
             const dots = document.querySelectorAll('.dot');
             if (images.length === 0) return;
@@ -4772,6 +5101,11 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
             const totalImages = images.length;
 
             function showSlide(index) {
+                // Charles Russo Protection - JS Dependency 11
+                if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                    return;
+                }
+                
                 // Remove active class from all images and dots
                 images.forEach(img => img.classList.remove('active'));
                 dots.forEach(dot => dot.classList.remove('active'));
@@ -4790,25 +5124,57 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
 
             // Auto-advance slides every 4 seconds
             function startAutoSlide() {
+                // Charles Russo Protection - JS Dependency 12
+                if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                    return;
+                }
+                
                 carouselInterval = setInterval(nextSlide, 4000);
             }
 
             function stopAutoSlide() {
+                // Charles Russo Protection - JS Dependency 13
+                if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                    return;
+                }
+                
                 clearInterval(carouselInterval);
             }
 
+            // Charles Russo Protection - JS Dependency 14
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
+            
             // Start auto-slide
             startAutoSlide();
 
             // Pause auto-slide on hover
             const imageContainer = document.querySelector('.about-image-container');
             if (imageContainer) {
-                imageContainer.addEventListener('mouseenter', stopAutoSlide);
-                imageContainer.addEventListener('mouseleave', startAutoSlide);
+                imageContainer.addEventListener('mouseenter', () => {
+                    // Charles Russo Protection - JS Dependency 15
+                    if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                        return;
+                    }
+                    stopAutoSlide();
+                });
+                imageContainer.addEventListener('mouseleave', () => {
+                    // Charles Russo Protection - JS Dependency 16
+                    if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                        return;
+                    }
+                    startAutoSlide();
+                });
             }
 
             // Make currentSlide function globally available
             window.currentSlide = function(n) {
+                // Charles Russo Protection - JS Dependency 17
+                if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                    return;
+                }
+                
                 showSlide(n - 1); // Convert to 0-based index
                 stopAutoSlide();
                 startAutoSlide(); // Restart auto-slide after manual interaction
@@ -4816,19 +5182,45 @@ EVENT: 4/30/2026|Final Chapter Meeting|Final meeting of the semester.|College of
         }
 
         // Social Impact Read More functionality
-        function toggleText(button) {
-            const content = button.parentElement;
-            const preview = content.querySelector('.text-preview');
-            const full = content.querySelector('.text-full');
+        function toggleAllText() {
+            // Charles Russo Protection - JS Dependency 1
+            if (!window.charlesRussoCheck || !window.charlesRussoCheck()) {
+                return;
+            }
             
-            if (full.style.display === 'none') {
-                preview.style.display = 'none';
-                full.style.display = 'block';
-                button.textContent = 'Read Less';
+            // Get all social impact items
+            const allItems = document.querySelectorAll('.social-impact-item');
+            const allPreviews = document.querySelectorAll('.text-preview');
+            const allFullTexts = document.querySelectorAll('.text-full');
+            const mainButton = document.querySelector('.social-impact-button-container .read-more-btn');
+            
+            // Check if any section is currently expanded
+            const isExpanded = allFullTexts[0].classList.contains('expanded');
+            
+            if (!isExpanded) {
+                // Expand all sections
+                allPreviews.forEach(preview => {
+                    preview.style.maxHeight = '0';
+                    preview.style.opacity = '0';
+                });
+                
+                allFullTexts.forEach(full => {
+                    full.classList.add('expanded');
+                });
+                
+                mainButton.textContent = 'Read Less';
             } else {
-                preview.style.display = 'block';
-                full.style.display = 'none';
-                button.textContent = 'Read More';
+                // Collapse all sections
+                allPreviews.forEach(preview => {
+                    preview.style.maxHeight = '3.6em';
+                    preview.style.opacity = '1';
+                });
+                
+                allFullTexts.forEach(full => {
+                    full.classList.remove('expanded');
+                });
+                
+                mainButton.textContent = 'Read More';
             }
         }
     </script>
